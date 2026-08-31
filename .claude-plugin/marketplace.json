@@ -1,0 +1,11 @@
+{
+  "name": "my-plugin",
+  "owner": { "name": "me" },
+  "plugins": [
+    {
+      "name": "my-plugin",
+      "source": "./",
+      "description": "My personalization plugin — evolved one retro at a time."
+    }
+  ]
+}
