@@ -6,13 +6,21 @@ yours: only your AI writes it, and it evolves one retro at a time. The plugin
 is named `my`, so everything it adds loads under that prefix (`/my:<skill>`);
 the `plugins/` folder is the local marketplace it installs from.
 
+A retro approves a fix; the resolve lane's worker team builds it here; the
+manager releases the plugin.
+
 This is a standard Claude Code plugin. Fixes land as whatever artifact the
 approved solution calls for:
 
 - `skills/` — how the AI works with you (an example skill shows the shape)
+- `skills/file-issues/` — a skeleton you adapt if you track issues elsewhere
 - `instructions/global.md` — short curated instruction lines
 - `hooks/` — rules that always run, when guidance isn't enough
 - plus agents, monitors, executables, and MCP config as your fixes need them
+
+`retroloop.md` at the root records the choices `/retroloop:setup` made — where
+issues are tracked, and which models run the resolve lane. Plain lines; edit
+them by hand or run setup again.
 
 It ships nearly empty on purpose: Retroloop builds only from things that
 actually happened in your sessions — nothing speculative, nothing generic.
