@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# my-plugin SessionStart hook — the delivery mechanism for L1 (words-only)
+# `my` SessionStart hook (the personalization plugin) — the delivery mechanism for L1 (words-only)
 # fixes: injects the curated instruction surfaces, under hard budgets.
 # Over budget = loud refusal, never truncation: a silently trimmed rule is
 # a rule the AI half-follows, which is worse than the loud failure.
@@ -20,7 +20,7 @@ if [ -n "$cwd" ]; then
 fi
 
 refuse() {
-  echo "my-plugin: REFUSING to inject $1 — $2 chars, budget $3. Trim it; truncation would half-apply rules silently." >&2
+  echo "my: REFUSING to inject $1 — $2 chars, budget $3. Trim it; truncation would half-apply rules silently." >&2
   exit 1
 }
 
@@ -33,7 +33,7 @@ if [ -n "$project_file" ] && [ -f "$project_file" ]; then
   [ "$size" -le "$PROJECT_BUDGET" ] || refuse "instructions/projects/$(basename "$project_file")" "$size" "$PROJECT_BUDGET"
 fi
 
-echo "[my-plugin active]"
+echo "[my active]"
 [ -f "$GLOBAL" ] && cat "$GLOBAL"
 [ -n "$project_file" ] && [ -f "$project_file" ] && cat "$project_file"
 
