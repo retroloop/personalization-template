@@ -83,7 +83,7 @@ retroloop attribute create "external issue id" --type url --json
      never be changed afterwards, so pick it once. -->
 
 **Only when the human's AI-config-writes setting allows it.** That switch is on
-his settings page and it starts off. Exit **5** is the answer when it is off:
+his settings page, and it may be off. Exit **5** is the answer when it is off:
 say so in one line, and move on. Never retry it, never ask him to turn it on
 mid-run, never route around it.
 
