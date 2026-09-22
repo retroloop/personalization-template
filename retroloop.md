@@ -3,7 +3,7 @@
 Choices recorded by /retroloop:setup. Plain lines; edit them by hand or run setup again.
 
 tracking: this tool only
-model: fable
+model: opus
 subagent model: opus
 
 `tracking:` is `this tool only` — the default, where the resolve lane applies the
